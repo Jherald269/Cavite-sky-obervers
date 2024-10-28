@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cavite Sky Obserbers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/CSOlogo.jpg" type="image/icon type">
+    <meta name="description" content="Cavite Sky Obesservers">
+    <meta name="keywords" content="CSO org">
+    <meta name="author" content="Jerald Relucio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <header>
+        <a href="#home" class="logo">
+            <img src="img/LogoCSO.png" alt="Cavite Sky Observers Logo">
+            Cavite Sky Observers
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    </header>
+    
+    <!-- <header>
+        <div class="logo">Cavite Sky Observers</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header> -->
+
+    <section class="hero">
+        <h1>Exploring the Night Sky</h1>
+        <p>Join us in observing and learning about the celestial wonders above Cavite.</p>
+    </section>
+
+    <section id="about" class="content-section">
+        <h2>About Us</h2>
+        <p>Cavite Sky Observers is a community of astronomy enthusiasts based in Cavite. We gather to observe, capture, and share the beauty of the night sky.</p>
+    </section>
+
+    <section id="gallery" class="content-section">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="img/bryManggahanGentri.jpg" alt="Starry Sky 1" onclick="openModal(this)">
+            <img src="img/MappleGroove.jpg" alt="Starry Sky 2" onclick="openModal(this)">
+            <img src="img/vermoza.jpg" alt="Starry Sky 3" onclick="openModal(this)">
+        </div>
+    </section>
+    
+    <!-- Modal for displaying images -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    
+
+    <section id="contact" class="content-section">
+        <h2>Contact Us</h2>
+        <p>For more information about our events or membership, email us at:
+        <br>
+        <strong>info@caviteskyobservers.com</strong>
+        </p>
+        <br>
+        <h2>Address</h2>
+        <i>Barangay, Block, General Trias Cavite</i>>
+        <br>
+        <br>
+        <h2>Cellphone number</h2>
+        <i>09**-****-***</i>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Cavite Sky Observers. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+ 
+</body>
+</html>

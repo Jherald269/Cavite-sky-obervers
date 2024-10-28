@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url('img/hero.jpg'); /* Replace with the correct path to your image */
+    background-color: #1a1a2e;
+    color: #f1f1f1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #0d0d22;
+}
+
+/* Logo styling */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #f1f1f1;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+    margin-right: 10px; /* Space between logo and text */
+    border-radius: 50%; /* Optional: for circular effect */
+}
+
+/* Nav styling */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+    .logo {
+        font-size: 20px;
+    }
+}
+
+/* Hide nav on small screens */
+nav ul {
+    display: flex;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+}
+
+/* Show menu-toggle on smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide by default */
+        flex-direction: column;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    nav ul.open {
+        display: flex;
+    }
+}
+
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    /* background: url('starry-background.jpg') no-repeat center center/cover; */
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.content-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows images to wrap on smaller screens */
+}
+
+.gallery img {
+    width: 100%; /* Full width within the container */
+    max-width: 250px; /* Limit width for better scaling */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Crop image to fit in the designated space */
+    border-radius: 8px;
+}
+
+
+
+.contact {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0d0d22;
+    font-size: 14px;
+}
+
+.hero {
+    background: url('img/hero.jpg') no-repeat center center/cover;
+}
+
+/* Modal container */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+}
+
+/* Modal content image */
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 8px;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* Mobile responsiveness */
+/* @media screen and (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+} */
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .gallery img {
+        max-width: 100%; /* Allow images to take full width on mobile */
+    }
+}
+
+/*for viewpoint*/
+@media screen and (max-width: 768px) {
+    nav ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    nav h1 {
+        font-size: 1.2rem; /* Make the title smaller */
+        padding: 10px 0; /* Reduce the padding for the header */
+    }
+
+    nav ul li {
+        font-size: 0.9rem; /* Smaller font size for links */
+        margin: 5px 0; /* Less margin between each item */
+    }
+
+    nav {
+        padding: 5px; /* Reduce overall header padding */
+    }
+}
+
